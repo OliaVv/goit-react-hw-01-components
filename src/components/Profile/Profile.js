@@ -1,32 +1,42 @@
-
+import PropTypes from 'prop-types';
+import { IoIosPeople, IoIosEye } from "react-icons/io";
+import { AiFillLike } from "react-icons/ai";
+import {Image, Card, Stats, Name, Tag, Location} from './Profile.styled'
 export const Profile = ({ user, tag, location, avatar, stats: { followers, views, likes } }) => {
     return (
-<div class="profile">
-  <div class="description">
-    <img
+<div >
+  <Card >
+    <Image
       src={avatar}
       alt={user}
-      class="avatar"
     />
-                <p class="name">{user}</p>
-                <p class="tag">@{tag}</p>
-                <p class="location">{location}</p>
-  </div>
+                <Name>{user}</Name>
+                <Tag>@{tag}</Tag>
+                <Location>{location}</Location>
+  </Card>
 
-  <ul class="stats">
+  <Stats>
     <li>
-      <span class="label">Followers</span>
-                    <span class="quantity">{followers}</span>
+      <IoIosPeople size='20px' />
+                    <span>{followers}</span>
     </li>
     <li>
-      <span class="label">Views</span>
-                    <span class="quantity">{views}</span>
+      <IoIosEye size='20px' />
+                    <span>{views}</span>
     </li>
     <li>
-      <span class="label">Likes</span>
-                    <span class="quantity">{likes}</span>
+      < AiFillLike size='20px' />
+                    <span>{likes}</span>
     </li>
-  </ul>
+  </Stats>
 </div>
     )
+};
+
+Profile.propTypes = {
+  user: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.objectOf(PropTypes.number).isRequired,
 };

@@ -1,8 +1,14 @@
-//import { StatisticsList } from "./StatisticsList";
+import PropTypes from 'prop-types';
+import { Section, Title } from './Statistics.styled';
 
 export const Statistics = ({title, children}) => {
-    return <section class="statistics">
-        {title && <h2 class="title">{title}</h2>}
+    return <Section >
+        {title && <Title >{title}</Title>}
         {children} 
-</section>
+</Section>
 };
+
+Statistics.propTypes = {
+    title: PropTypes.string,
+    children: PropTypes.node,
+}

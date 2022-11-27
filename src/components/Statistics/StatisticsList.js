@@ -1,11 +1,20 @@
+import PropTypes from 'prop-types';
+import { StatList, Item } from './Statistics.styled';
 import { StatisticsListItem } from "./StatisticsListItem";
 
 export const StatisticsList = ({stats}) => {
-    return (<ul class="stat-list">
+    return (<StatList >
         {stats.map(doc => (
-            <li key={doc.id} class="item">
+            <Item key={doc.id} class="item">
                 <StatisticsListItem doc={doc}/>
-       </li>
+       </Item>
    ))}
-  </ul>)
+  </StatList>)
+};
+StatisticsList.propTypes = {
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
