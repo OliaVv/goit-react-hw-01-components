@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 
 export const StatisticsListItem = ({doc: {label, percentage}}) => {
     return <>
-          <span class="label">{label}</span>
-      <span class="percentage">{percentage}%</span>  
-    </>
-}
+          <span >{label}</span>
+          <span >{percentage}%</span>  
+        </>
+    }
 
 StatisticsListItem.propTypes = {
     stats: PropTypes.arrayOf(

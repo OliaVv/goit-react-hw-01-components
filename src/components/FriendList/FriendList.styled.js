@@ -14,7 +14,6 @@ border-radius: 10px;
 font-size: 20px;
 font-style: italic;
 background-color: beige;
-
 `
 export const Status = styled.span`
     margin-right: 10px;

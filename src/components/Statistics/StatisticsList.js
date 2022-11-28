@@ -5,7 +5,7 @@ import { StatisticsListItem } from "./StatisticsListItem";
 export const StatisticsList = ({stats}) => {
     return (<StatList >
         {stats.map(doc => (
-            <Item key={doc.id} class="item">
+            <Item key={doc.id} >
                 <StatisticsListItem doc={doc}/>
        </Item>
    ))}

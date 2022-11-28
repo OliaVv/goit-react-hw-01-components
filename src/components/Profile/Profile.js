@@ -10,23 +10,23 @@ export const Profile = ({ user, tag, location, avatar, stats: { followers, views
       src={avatar}
       alt={user}
     />
-                <Name>{user}</Name>
-                <Tag>@{tag}</Tag>
-                <Location>{location}</Location>
+      <Name>{user}</Name>
+      <Tag>@{tag}</Tag>
+      <Location>{location}</Location>
   </Card>
 
   <Stats>
     <li>
       <IoIosPeople size='20px' />
-                    <span>{followers}</span>
+        <span>{followers}</span>
     </li>
     <li>
       <IoIosEye size='20px' />
-                    <span>{views}</span>
+        <span>{views}</span>
     </li>
     <li>
       < AiFillLike size='20px' />
-                    <span>{likes}</span>
+        <span>{likes}</span>
     </li>
   </Stats>
 </div>
