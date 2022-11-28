@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { IoIosPeople, IoIosEye } from "react-icons/io";
 import { AiFillLike } from "react-icons/ai";
 import {Image, Card, Stats, Name, Tag, Location} from './Profile.styled'
+
 export const Profile = ({ user, tag, location, avatar, stats: { followers, views, likes } }) => {
     return (
 <div >

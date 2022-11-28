@@ -7,9 +7,9 @@ export const StatisticsList = ({stats}) => {
         {stats.map(doc => (
             <Item key={doc.id} >
                 <StatisticsListItem doc={doc}/>
-       </Item>
-   ))}
-  </StatList>)
+            </Item>
+        ))}
+        </StatList>)
 };
 StatisticsList.propTypes = {
   stats: PropTypes.arrayOf(
